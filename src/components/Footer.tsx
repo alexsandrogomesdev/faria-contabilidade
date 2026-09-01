@@ -1,13 +1,14 @@
 import { Building2, Mail, MessageCircle } from "lucide-react";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer>
-      <section>
+    <footer className={styles.footer}>
+      <section className={styles.footer_section}>
         <div>
-          <span>
+          <b>
             FARIA <span>gestão contábil e trubutária</span>
-          </span>
+          </b>
           <p>
             Engenharia tributária, contabilidade consultiva e governança financeira para empresas de alta complexidade.
           </p>
@@ -23,7 +24,7 @@ export default function Footer() {
         </div>
         <div>
           <span>Canais diretos</span>
-          <ul>
+          <ul className={styles.ul_contact}>
             <li>
               <Mail />
               <span>contato@faria.contabilidade</span>

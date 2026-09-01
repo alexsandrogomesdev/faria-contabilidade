@@ -9,6 +9,7 @@ const playFair = Playfair_Display({
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plusJakarta",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {

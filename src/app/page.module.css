@@ -17,10 +17,458 @@
     100% 100%,
     100% 100%;
   background-image:
-    /* 1. Linhas da grade (ficam no topo) */
     linear-gradient(to right, color-mix(in oklab, #9e6634 12%, transparent) 1px, transparent 1px),
     linear-gradient(to bottom, color-mix(in oklab, #9e6634 12%, transparent) 1px, transparent 1px),
-    /* 2. Glow radial */
     radial-gradient(120% 90% at 80% 10%, color-mix(in oklab, #9e6634 10%, transparent), transparent 62%),
-    /* 3. Fundo base (fica no fundo de tudo) */ linear-gradient(160deg, oklch(99% 0.004 85) 0%, #efece7 100%);
+    linear-gradient(160deg, oklch(99% 0.004 85) 0%, #efece7 100%);
+  padding: 96px 0;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+.presentation > div > div {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  padding: 0 24px;
+}
+.presentation > div > div > p {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9e6634;
+}
+.presentation > div > div > h1 {
+  line-height: 1.08;
+  font-size: 2.2rem;
+  font-family: var(--font-playFair);
+  color: #121c32;
+  font-weight: 400;
+}
+.presentation > div > div > h1 > span {
+  background-image: linear-gradient(100deg, oklch(56% 0.098 60), oklch(68% 0.093 65));
+  color: #0000;
+  background-clip: text;
+}
+.presentation > div > div > span {
+  color: #5d646f;
+  line-height: 1.625;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.presentation > div > div > div {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.presentation > div > div > div > a {
+  min-height: 52px;
+  max-height: 52px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow:
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 14px 34px -14px color-mix(in oklab, oklch(56% 0.098 60) 45%, transparent);
+  color: #fdfcf8;
+  letter-spacing: 0.025em;
+  background-image: linear-gradient(100deg, oklch(56% 0.098 60), oklch(68% 0.093 65));
+  border-radius: calc(0.5rem - 2px);
+}
+.presentation > div > div > div > a:nth-of-type(2) {
+  background-image: none;
+  border: solid 1px color-mix(in oklab, #9e6634 45%, transparent);
+  color: #121c32;
+  font-weight: 400;
+}
+.presentation > div > figure {
+  overflow: hidden;
+  border-radius: 16px;
+  border: solid 1px color-mix(in oklab, #9e6634 25%, transparent);
+  padding: 16px;
+  margin: 0 10px;
+}
+.presentation > div > figure img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow:
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 24px 60px -28px #121c3259;
+}
+
+.ul_presentation {
+  display: flex;
+  flex-flow: column;
+  background-color: #f5f3ef;
+  padding: 16px 24px;
+  gap: 16px;
+}
+.ul_presentation li {
+  display: flex;
+  flex-flow: column;
+  gap: 7px;
+  padding: 25px 0;
+}
+.ul_presentation li p {
+  font-size: 2.25rem;
+  color: #9e6634;
+  font-family: var(--font-playFair);
+}
+.ul_presentation li span {
+  color: #5d646f;
+  font-size: 0.875rem;
+}
+
+.differentials {
+  background-image:
+    radial-gradient(120% 90% at 80% 10%, color-mix(in oklab, #9e6634 10%, transparent), transparent 62%),
+    linear-gradient(160deg, #fdfcf9 0%, #efece7 100%);
+  padding: 96px 24px;
+}
+.differentials > div {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+.differentials > div > p {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9e6634;
+}
+.differentials > div > h2 {
+  line-height: 1.08;
+  font-size: 1.875rem;
+  font-family: var(--font-playFair);
+  color: #121c32;
+  font-weight: 400;
+}
+.ul_differentials {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.ul_differentials li {
+  box-shadow:
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 10px 30px -24px #0f172a80;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  border: solid 1px color-mix(in oklab, #9e6634 20%, transparent);
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.ul_differentials li svg {
+  color: #9e6634;
+}
+.ul_differentials li h3 {
+  color: #121c32;
+  font-size: 1.25rem;
+  letter-spacing: -0.015em;
+  font-family: var(--font-playFair);
+  font-weight: 400;
+}
+.ul_differentials li p {
+  color: #5d646f;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.solutions {
+  background-color: #fff;
+  padding: 96px 24px;
+}
+.solutions > div {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+.solutions > div > p {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9e6634;
+}
+.solutions > div > h2 {
+  line-height: 1.08;
+  font-size: 1.875rem;
+  font-family: var(--font-playFair);
+  color: #121c32;
+  font-weight: 400;
+}
+.ul_solutions {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.ul_solutions li {
+  padding: 24px;
+  border-radius: 8px;
+  border: solid 1px color-mix(in oklab, #9e6634 20%, transparent);
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.ul_solutions li div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ul_solutions li div svg {
+  color: #9e6634;
+}
+.ul_solutions li div span {
+  color: #dbdee3;
+  font-size: 1.5rem;
+  font-family: var(--font-playFair);
+}
+.ul_solutions li h3 {
+  color: #121c32;
+  font-size: 1.25rem;
+  letter-spacing: -0.015em;
+  font-family: var(--font-playFair);
+  font-weight: 400;
+}
+.ul_solutions li p {
+  color: #5d646f;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.institutional {
+  background-color: #f5f3ef;
+}
+.institutional > div {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+  padding: 24px;
+}
+.institutional > div figure {
+  max-width: 100%;
+}
+.institutional > div figure img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.institutional > div > div {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+.institutional > div > div > p:nth-of-type(1) {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9e6634;
+}
+.institutional > div > div > p:not(:nth-of-type(1)) {
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5d646f;
+  font-family: var(--font-plusJakarta), ui-sans-serif, system-ui, sans-serif;
+}
+.institutional > div > div > h2 {
+  line-height: 1.08;
+  font-size: 1.875rem;
+  font-family: var(--font-playFair);
+  color: #121c32;
+  font-weight: 400;
+}
+.ul_institutional {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.ul_institutional li {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  gap: 10px;
+}
+.ul_institutional li svg {
+  min-width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+  color: #9e6634;
+}
+.ul_institutional li span {
+  font-size: 14px;
+  color: #121c32;
+}
+.div_founder {
+  display: flex;
+  flex-flow: column;
+  border-left: solid 3px #9e6634;
+  padding: 0 16px;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+.div_founder p {
+  font-size: 1.25rem;
+  color: #121c32;
+  font-family: var(--font-playFair);
+}
+.div_founder span {
+  color: #9e6634;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.contact {
+  background-image:
+    radial-gradient(120% 90% at 80% 10%, color-mix(in oklab, #9e6634 10%, transparent), transparent 62%),
+    linear-gradient(160deg, #fdfcf9 0%, #efece7 100%);
+  padding: 96px 24px;
+}
+.contact > div {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+.contact > div > div {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+.contact > div > div > p:nth-of-type(1) {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9e6634;
+}
+.contact > div > div > h2 {
+  line-height: 1.08;
+  font-size: 1.875rem;
+  font-family: var(--font-playFair);
+  color: #121c32;
+  font-weight: 400;
+}
+.ul_contact {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.ul_contact li {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  gap: 10px;
+}
+.ul_contact li svg {
+  min-width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+  color: #9e6634;
+}
+.ul_contact li span {
+  font-size: 14px;
+  color: #5d646f;
+}
+.contact_form {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  box-shadow:
+    0 0 #000,
+    0 0 #000,
+    0 0 #000,
+    0 0 #000,
+    0 24px 60px -28px oklab(22.9% -0.00392201 -0.0448288/0.35);
+  background-color: #fff;
+  padding: 24px;
+  border: solid 1px color-mix(in oklab, #9e6634 25%, transparent);
+  border-radius: calc(0.5rem - 2px);
+}
+.contact_form > div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.div_input {
+  display: flex;
+  flex-flow: column !important;
+  gap: 2px;
+}
+.div_input label {
+  font-size: 14px;
+  color: #5d646f;
+}
+.div_input input {
+  font-size: 16px;
+  color: #121c32;
+  background-color: transparent;
+  border: solid 1px color-mix(in oklab, #9e6634 25%, transparent);
+  min-height: 36px;
+  max-height: 36px;
+  border-radius: 4px;
+  padding: 0 10px;
+  outline: 0;
+}
+.div_input textarea {
+  font-size: 16px;
+  color: #121c32;
+  background-color: transparent;
+  border: solid 1px color-mix(in oklab, #9e6634 25%, transparent);
+  min-height: 117px;
+  max-height: 117px;
+  border-radius: 4px;
+  padding: 10px;
+  outline: 0;
+}
+.contact_form > div .div_input {
+  flex: 1;
+  max-width: 46%;
+}
+.contact_form button {
+  min-height: 44px;
+  max-height: 44px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow:
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 14px 34px -14px color-mix(in oklab, #9e6634 45%, transparent);
+  color: #fdfcf8;
+  letter-spacing: 0.025em;
+  background-image: linear-gradient(100deg, #9e6634, #c08c58);
+  border-radius: calc(0.5rem - 2px);
+  border: none;
+}
+.contact_form > span {
+  font-size: 12px;
+  color: #5d646f;
+  text-align: center;
 }

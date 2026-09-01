@@ -39,7 +39,7 @@ export default function Home() {
             </span>
             <div>
               <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-                Falar com um especialista <ArrowUpRight />
+                Falar com um especialista <ArrowUpRight width={16} height={16} />
               </a>
               <a href="#solution">Conhecer Nossas Soluções</a>
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
             <Image src="/image-1.jpg" alt="people" width={560} height={520} />
           </figure>
         </div>
-        <ul>
+        <ul className={styles.ul_presentation}>
           <li>
             <p>+15</p>
             <span>Anos de expertise em operações de alta complexidade</span>
@@ -157,23 +157,23 @@ export default function Home() {
               Cada cliente é conduzido por um especialista sênior, com leitura de mercado, disciplina de compliance e
               foco permanente em eficiência tributária dentro da lei.
             </p>
-            <ul>
+            <ul className={styles.ul_institutional}>
               <li>
                 <CircleCheck />
-                Diagnóstico tributário antes de qualquer proposta
+                <span>Diagnóstico tributário antes de qualquer proposta</span>
               </li>
               <li>
                 <CircleCheck />
-                Interlocução direta, sem intermediários
+                <span>Interlocução direta, sem intermediários</span>
               </li>
               <li>
                 <CircleCheck />
-                Governança documental e auditoria preventiva contínua
+                <span>Governança documental e auditoria preventiva contínua</span>
               </li>
             </ul>
-            <div>
+            <div className={styles.div_founder}>
               <p>Rodrigo Faria</p>
-              <p>Fundador & Contador Responsável</p>
+              <span>Fundador & Contador Responsável</span>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function Home() {
             <p>Diagnóstico estratégico</p>
             <h2>Sua empresa está pronta para um novo patamar de gestão tributária?</h2>
             <p>Agende uma reunião estratégica inicial sem compromisso e avalie a eficiência da sua operação atual.</p>
-            <ul>
+            <ul className={styles.ul_contact}>
               <li>
                 <Mail />
                 <span>contato@faria.contabilidade</span>
@@ -200,26 +200,26 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <form>
-            <div>
+          <form className={styles.contact_form}>
+            <div className={styles.div_input}>
               <label htmlFor="name">Nome Completo</label>
               <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
             <div>
-              <div>
+              <div className={styles.div_input}>
                 <label htmlFor="email">E-mail corporativo</label>
                 <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
-              <div>
+              <div className={styles.div_input}>
                 <label htmlFor="phone">Telefone / WhatsApp</label>
                 <input type="text" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
               </div>
             </div>
-            <div>
+            <div className={styles.div_input}>
               <label htmlFor="company">Empresa & regime tributário(opcional)</label>
               <input type="text" name="company" value={company} onChange={(e) => setCompany(e.target.value)} />
             </div>
-            <div>
+            <div className={styles.div_input}>
               <label htmlFor="message">Mensagem rápida</label>
               <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             </div>
