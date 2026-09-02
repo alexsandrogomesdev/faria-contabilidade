@@ -71,3 +71,37 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (min-width: 768px) {
+  .footer_section {
+    min-width: 1280px;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .footer_section span,
+  .footer_section p {
+    font-size: 14px;
+  }
+  .footer_section > div {
+    max-width: 280px;
+  }
+  .footer_section > div > nav {
+    flex-flow: column;
+    gap: 12px;
+  }
+  .footer_section > div > nav > span {
+    cursor: pointer;
+  }
+  .footer_section > div > nav > span:hover {
+    color: #9e6634;
+  }
+  .footer > section:nth-of-type(2) {
+    flex-flow: row;
+    justify-content: space-around;
+  }
+  .footer > section:nth-of-type(2) > div {
+    gap: 36px;
+  }
+}

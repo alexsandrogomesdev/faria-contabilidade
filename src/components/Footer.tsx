@@ -1,7 +1,7 @@
 import { Building2, Mail, MessageCircle } from "lucide-react";
 import styles from "./Footer.module.css";
 
-export default function Footer() {
+export default function Footer({ scrollTo }: { scrollTo: (target: string) => void }) {
   return (
     <footer className={styles.footer}>
       <section className={styles.footer_section}>
@@ -16,10 +16,10 @@ export default function Footer() {
         <div>
           <span>Navegação</span>
           <nav>
-            <span>Diferenciais</span>
-            <span>Soluções</span>
-            <span>Institucional</span>
-            <span>Contato</span>
+            <span onClick={() => scrollTo("Diferenciais")}>Diferenciais</span>
+            <span onClick={() => scrollTo("Soluções")}>Soluções</span>
+            <span onClick={() => scrollTo("Institucional")}>Institucional</span>
+            <span onClick={() => scrollTo("Contato")}>Contato</span>
           </nav>
         </div>
         <div>

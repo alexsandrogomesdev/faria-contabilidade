@@ -1,6 +1,16 @@
+"use client";
+
+import { RefObject } from "react";
 import styles from "./Header.module.css";
 
-export default function Header() {
+interface Refs {
+  differentials: React.RefObject<HTMLDivElement | null>;
+}
+interface Props {
+  scrollTo: (target: string) => void;
+}
+
+export default function Header({ scrollTo }: Props) {
   return (
     <header className={styles.header}>
       <section className={styles.header_section}>
@@ -9,10 +19,10 @@ export default function Header() {
           <span>GESTÃO CONTÁBIL</span>
         </div>
         <nav>
-          <span>Diferenciais</span>
-          <span>Soluções</span>
-          <span>Institucional</span>
-          <span>Contato</span>
+          <span onClick={() => scrollTo("Diferenciais")}>Diferenciais</span>
+          <span onClick={() => scrollTo("Soluções")}>Soluções</span>
+          <span onClick={() => scrollTo("Institucional")}>Institucional</span>
+          <span onClick={() => scrollTo("Contato")}>Contato</span>
         </nav>
         <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
           Falar com especialista

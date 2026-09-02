@@ -17,17 +17,10 @@ export const metadata: Metadata = {
   description: "Gestão contábil e tributária",
 };
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${playFair.variable} ${plusJakarta.variable}`}>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
