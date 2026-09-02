@@ -4,7 +4,7 @@ export function useMultiScrollReveal(selector = ".reveal-item") {
   useEffect(() => {
     const elements = document.querySelectorAll(selector);
     if (!elements.length) return;
-
+ 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
